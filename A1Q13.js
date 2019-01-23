@@ -6,11 +6,10 @@ function magic(num){
     let sum = 0;
     while (test >=1){
         let test4 = test % 10;
-        console.log(test4);
         sum = sum + test4;
         test = Math.floor(test/10);
-        console.log(test);
-        console.log(sum);
+       
+       
     }
     let test2= sum;
     let rev = 0;
@@ -18,7 +17,7 @@ function magic(num){
         let test3 = test2 % 10;
         rev = rev*10+ test3;
         test2 = Math.floor(test2 /10);
-        console.log(rev);
+       
     }
     let prod = rev*sum;
     if (num === prod){
