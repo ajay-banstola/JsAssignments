@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Dice Simulator 2019</title>
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>
+
+  <img src="" id="placeholder">
+  <img src="" id="placeholder1">
+  <p id = "finalresult">
+  </p>
+  <script>
+	var dice = {
+	  sides: 6,
+	  roll: function () {
+		var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+		return randomNumber;
+	  }
+
+	}
+
+	function printNumber(number) {
+			return document.getElementById("placeholder").src = "images/dice" + number + ".png";
+		}
+
+
+	  var result = dice.roll();
+	  printNumber(result);
+
+	function printNumber2(number) {
+	   return document.getElementById("placeholder1").src = "images/dice" + number + ".png";
+
+	}
+	  var result2 = dice.roll();
+	  printNumber2(result2);
+
+	if(result>result2){
+		document.getElementById("finalresult").innerHTML = "Player 1 wins";
+	}
+	else if (result == result2){
+		document.getElementById("finalresult").innerHTML = "It's a draw";
+	}else{
+		document.getElementById("finalresult").innerHTML = "Player 2 wins";
+
+	}
+ </script>
+</body>
+</html>
